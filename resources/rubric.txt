@@ -1,0 +1,25 @@
+Code is commented according to the CIS Style Guide https://www.cis.gvsu.edu/java-coding-style-guide/ - 10 points
+
+Code is object oriented and instance variables are marked private (double underscore before the name) - 10 points
+
+Code uses encapsulation (always uses getters/setters for private data) - 10 points
+
+Python3 (not Python2!) - 10 points
+
+Hidden keystroke that adds an additional ball when pressed - 10 points
+
+Paddle works and coded correctly - 10 points
+
+Balls work and coded correctly - 10 points
+
+Bricks work and coded correctly - 10 points
+
+Uses built-in collision detection methods - 10 points
+
+Adds background music and sounds - 10 points
+
+Total 100 points.
+
+
+"coded correctly" means adheres to OO ideas we talked about in class, limited code
+duplication, full use of encapsulation, and polymorphism where appropriate.

@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/61480883/how-to-add-subclass-to-a-sprite-group-in-pygame
+
+https://www.tutorialspoint.com/How-to-override-class-methods-in-Python
+
+[This one's a little cheeky, only use for reference in some cases]
+http://programarcadegames.com/python_examples/show_file.php?file=breakout_simple.py
