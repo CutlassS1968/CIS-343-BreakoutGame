@@ -7,7 +7,7 @@ For this assignment, you will create a game in Python.  We will use the PyGame l
 
 Specifically, we will be making the game Breakout.  You may have played something similar:
 
-![example](https://github.com/CutlassS1968/CIS-343-BreakoutGame/blob/master/resources/example.png)
+![example](https://github.com/CutlassS1968/CIS-343-BreakoutGame/blob/main/resources/example.png)
 
 
 The colored bricks at the top must be broken by the ball(s). The paddle keeps the ball in play.
