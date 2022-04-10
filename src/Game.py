@@ -1,5 +1,6 @@
 from Brick import Brick
 from Paddle import Paddle
+from Ball import Ball
 import pygame as pg
 
 
@@ -17,9 +18,11 @@ class Game:
   screen = pg.display.set_mode((800,600))
   running = True
   clock = pg.time.Clock()
-
   
+  ball = Ball()
   paddle = Paddle()
+  balls = pg.sprite.Group() # have to add to group for collision
+  balls.add(ball)
   bricks = pg.sprite.Group()
 
 
@@ -45,23 +48,35 @@ class Game:
         sprite4.rect = sprite4.image.get_rect()
         sprite4.rect.x = x
         sprite4.rect.y = y
-        for brick in bricks:
-          # HERE YOU WOULD PULL BALL.RECT
-          if sprite4.rect.colliderect(brick.rect):
-            deleteBrick = brick.onHit()
-            if deleteBrick:
-              brick.kill()
+        
       if event.type == pg.KEYDOWN:
         if event.key == pg.K_LEFT:
           paddle.moveLeft()
         if event.key == pg.K_RIGHT:
           paddle.moveRight()
 
-
+   # for brick in bricks:
+    # HERE YOU WOULD PULL BALL.RECT
+     # if ball.rect.colliderect(brick.rect):
+      #  ball.bounce(0)
+      #  deleteBrick = brick.onHit()
+     # if deleteBrick:
+       # brick.kill()
+        
     #Object Updating
+    ball.update()
+   # paddle.update()
+    
+    if pg.sprite.spritecollide(ball, bricks, False):
+      ball.bounce(0)
+      
+    if pg.sprite.spritecollide(paddle, balls, False):
+      #ball.rect.y = 500
+      ball.bounce(0)
 
     # Redrawing
     screen.fill((0,0,0))
+    ball.draw(screen)
     bricks.draw(screen)
     brick.draw(screen)
     paddle.draw(screen)

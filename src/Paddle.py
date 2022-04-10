@@ -19,22 +19,25 @@ class Paddle(pg.sprite.Sprite):
   def __init__(self):
     pg.sprite.Sprite.__init__(self)
 
-    self.image = pg.Surface([100, 20])
+    self.image = pg.Surface([300, 20])
     self.image.fill((255,255,255))
 
     self.rect = self.image.get_rect()
-    self.rect.x = 350
-    self.rect.y = 500
+    self.rect.x = 150
+    self.rect.y = 550
 
   def draw(self, screen):
     screen.blit(self.image,self.rect)
 
   def moveLeft(self):
-    self.rect.x -= 10
+    if self.rect.x - 30 > -1: # so you can move paddle out of screen
+        self.rect.x -= 30
     
   def moveRight(self):
-    self.rect.x += 10
+    if self.rect.x + 30 < 531:# so you can move paddle out of screen
+      self.rect.x += 30
     
   #def update(self):
+    
 
 

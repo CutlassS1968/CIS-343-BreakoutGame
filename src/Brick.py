@@ -39,12 +39,12 @@ class Brick(pg.sprite.Sprite):
   def onHit(self):
     self.health -= 25
 
-    if self.red - 25 > 0:
-      self.red -= 25
-    if self.green - 25 > 0:
-      self.green -= 25
-    if self.blue - 25 > 0:
-          self.blue -= 25
+    if self.red - 8 > 0:
+      self.red -= 8
+    if self.green - 8 > 0:
+      self.green -= 8
+    if self.blue - 8 > 0:
+          self.blue -= 8
 
     if self.health < 0:
       return True
