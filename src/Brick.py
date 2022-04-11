@@ -18,25 +18,31 @@ from random import seed
 # Brick should have a hit method that removes 25 from its health and destroys
 # itself if health goes to 0 or below.
 class Brick(pg.sprite.Sprite):
+
   def __init__(self, x, y):
     pg.sprite.Sprite.__init__(self)
     # Variables for each brick
-    self.red = randint(0,255)
-    self.green = randint(0,255)
-    self.blue = randint(0,255)
+    red = randint(0,255)
+    green = randint(0,255)
+    blue = randint(0,255)
     self.health = self.red+self.green+self.blue
+
     # making rectangle and color
     self.image = pg.Surface([100,50])
     self.image.fill((self.red, self.green, self.blue))
+
     #setting the position
     self.rect = self.image.get_rect()
     self.rect.x = x
     self.rect.y = y
 
+
   def draw(self, screen):
     screen.blit(self.image,self.rect)
 
+
   def onHit(self):
+    # If brick gets hit, take health away
     self.health -= 25
 
     if self.red - 8 > 0:
@@ -53,3 +59,11 @@ class Brick(pg.sprite.Sprite):
     self.image.fill((self.red, self.green, self.blue))
 
     return False
+
+
+  def get_rect(self):
+    return self.rect
+
+
+  def set_rect(self, rect):
+    self.rect = rect

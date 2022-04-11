@@ -16,28 +16,47 @@ import pygame as pg
 #
 # Movement should be capped so the paddle can't move off the screen.
 class Paddle(pg.sprite.Sprite):
+
+  width = 300
+  height =  20
+
   def __init__(self):
     pg.sprite.Sprite.__init__(self)
 
-    self.image = pg.Surface([300, 20])
-    self.image.fill((255,255,255))
+    self.image = pg.Surface([self.width, self.height])
+    self.image.fill((0, 0, 0))
 
     self.rect = self.image.get_rect()
     self.rect.x = 150
     self.rect.y = 550
 
+
   def draw(self, screen):
     screen.blit(self.image,self.rect)
+
 
   def moveLeft(self):
     if self.rect.x - 30 > -1: # so you can move paddle out of screen
         self.rect.x -= 30
     
+
   def moveRight(self):
-    if self.rect.x + 30 < 531:# so you can move paddle out of screen
+    if self.rect.x + 30 < 531: # so you can move paddle out of screen
       self.rect.x += 30
     
-  #def update(self):
-    
 
+  def update(self, key):
+    # Move paddle
+    if key == pg.K_LEFT:
+      self.moveLeft()
+    if key == pg.K_RIGHT:
+      self.moveRight()
+
+
+  def get_rect(self):
+    return self.rect
+
+
+  def set_rect(self, rect):
+    self.rect = rect
 
