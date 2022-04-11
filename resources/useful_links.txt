@@ -2,5 +2,16 @@ https://stackoverflow.com/questions/61480883/how-to-add-subclass-to-a-sprite-gro
 
 https://www.tutorialspoint.com/How-to-override-class-methods-in-Python
 
-[This one's a little cheeky, only use for reference in some cases]
-http://programarcadegames.com/python_examples/show_file.php?file=breakout_simple.py
+https://stackoverflow.com/questions/65247656/how-do-i-change-the-volume-of-the-sound-or-music-in-pygame
+
+https://opensource.com/article/20/9/add-sound-python-game
+
+https://www.pygame.org/docs/ref/key.html
+
+https://pygame.readthedocs.io/en/latest/4_text/text.html
+
+https://www.pygame.org/docs/ref/sprite.html#pygame.sprite.spritecollide
+
+https://www.pygame.org/docs/ref/sprite.html
+
+https://www.pygame.org/docs/ref/sprite.html#pygame.sprite.Group
